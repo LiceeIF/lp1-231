@@ -28,4 +28,4 @@ public class ex02Teste {
         assertEquals(26.255999999999993, soma);
     }
 }
-}
+
