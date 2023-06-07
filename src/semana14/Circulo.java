@@ -2,11 +2,6 @@ package semana14;
     
 public class Circulo {
 
-    //construtor da classe:
-    public Circulo(double raio){
-        this.raio = raio;
-    }
-
     public double raio;
 
     public Circulo(double raio){
@@ -25,10 +20,10 @@ public class Circulo {
         return raio;
     }
     public void setRaio(double raio){
-        if(raio > 0){
+        if(raio <= 0){
             throw new RuntimeException("Raio inválido");
         }
         this.raio = raio;
-    }
+    }   
 }
 
