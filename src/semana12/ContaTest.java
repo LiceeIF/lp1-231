@@ -1,89 +1,39 @@
 package semana12;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class ContaTest{
 
     @Test
     public void testSacar() {
+        Conta conta = new Conta(1, "João");
+        conta.saldo = 100.0;
+        double novoSaldo = conta.Sacar(50.0, conta.saldo);
+        assertEquals(50.0, novoSaldo, 0.001);
 
-        Conta conta = new Conta(123, "Maria");
-        conta.depositar(100.0);
-
-        double saldoAtual = conta.sacar(50.0);
-
-        Assertions.assertEquals(50.0, saldoAtual);
-    }
-
-    @Test
-    public void testSacarValorMaiorQueSaldo() {
-
-        int codigo = 123;
-        String correntista = "Maria Fernanda";
-        double saldoInicial = 100.0;
-        double valorSaque = 150.0;
-        Conta conta = new Conta(codigo, correntista);
-        conta.saldo = saldoInicial;
-
-        Assertions.assertThrows(IllegalArgumentException.class, () -> {
-            conta.sacar(valorSaque, conta.saldo);
-        });
+        assertThrows(IllegalArgumentException.class, () -> conta.Sacar(200.0, conta.saldo));
     }
 
     @Test
     public void testDepositar() {
-
-        int codigo = 123;
-        String correntista = "Maria Fernanda";
-        double saldoInicial = 100.0;
-        double valorDeposito = 50.0;
-        double expectedSaldo = saldoInicial + valorDeposito;
-        Conta conta = new Conta(codigo, correntista);
-        conta.saldo = saldoInicial;
-
-
-        double saldoAtual = conta.depositar(valorDeposito);
-
-        Assertions.assertEquals(expectedSaldo, saldoAtual, 0.01);
+        Conta conta = new Conta(1, "João");
+        conta.saldo = 100.0;
+        double novoSaldo = conta.Depositar(50.0);
+        assertEquals(150.0, novoSaldo, 0.001);
     }
 
     @Test
     public void testTransferir() {
+        Conta conta1 = new Conta(1, "João");
+        Conta conta2 = new Conta(2, "Maria");
+        conta1.saldo = 100.0;
+        conta2.saldo = 50.0;
+        double novoSaldoConta1 = conta1.Transferir(conta2, 30.0);
+        double novoSaldoConta2 = conta2.saldo;
+        assertEquals(70.0, novoSaldoConta1, 0.001);
+        assertEquals(80.0, novoSaldoConta2, 0.001);
 
-        int codigoOrigem = 123;
-        String correntistaOrigem = "Maria Fernanda";
-        double saldoOrigem = 100.0;
-        double valorTransferencia = 50.0;
-        double saldoDestino = 0.0;
-        Conta contaOrigem = new Conta(codigoOrigem, correntistaOrigem);
-        contaOrigem.saldo = saldoOrigem;
-
-        int codigoDestino = 456;
-        String correntistaDestino = "Juliana Blanco";
-        Conta contaDestino = new Conta(codigoDestino, correntistaDestino);
-        contaDestino.saldo = saldoDestino;
-
-        double expectedSaldoOrigem = saldoOrigem - valorTransferencia;
-        double expectedSaldoDestino = saldoDestino + valorTransferencia;
-
-        double saldoAtualOrigem = contaOrigem.transferir(contaDestino, valorTransferencia);
-        double saldoAtualDestino = contaDestino.saldo;
-
-        Assertions.assertEquals(expectedSaldoOrigem, saldoAtualOrigem, 0.01);
-        Assertions.assertEquals(expectedSaldoDestino, saldoAtualDestino, 0.01);
+        assertThrows(IllegalArgumentException.class, () -> conta1.Transferir(conta2, 100.0));
     }
-
-    @Test
-    public void testTransferirValorMaiorQueSaldo() {
-
-        int codigoOrigem = 123;
-        String correntistaOrigem = "Maria Fernanda";
-        double saldoOrigem = 100.0;
-        double valorTransferencia = 150.0;
-
-        Assertions.assertThrows(IllegalArgumentException.class, () -> {
-            conta.transferir(valorSaque, conta.saldo);
-    });
-}
 }

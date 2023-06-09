@@ -1,6 +1,8 @@
 
 package semana14;
 
+import semana12.Aquario;
+
 public class Programa {
     public static void main(String[] args) {
         Quadrado quadrado = new Quadrado(10.0);

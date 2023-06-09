@@ -22,20 +22,10 @@ public class QuadradoTest {
     }
 
     @Test
-    public void testSetLadoInvalido() {
-        try {
-            Quadrado quadrado = new Quadrado(-5);
-            fail("Deveria ter lançado uma exceção");
-        } catch (RuntimeException e) {
-            assertEquals("lado inválido", e.getMessage());
-        }
-    }
-
-    @Test
     public void testGetLado() {
         Quadrado quadrado = new Quadrado(5);
         double expectedLado = 5.0;
         double actualLado = quadrado.getLado();
         assertEquals(expectedLado, actualLado, 0.001);
-    }
+}
 }

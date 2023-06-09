@@ -14,7 +14,7 @@ public class exRevisao {
         System.out.println("Maior valor: " + maiorValor(n1, n2, n3));
         System.out.println("Menor valor: " + menorValor(n1, n2, n3));
         for (int i = 0; i < 3; i++) {
-            System.out.println("Arrays: " + devolveArray(x, y, z)[i]);         
+            System.out.println("Arrays: " + Array(x, y, z)[i]);         
         }
         System.out.println("Soma de Arrays: " + somaArray(x, y, z));
         System.out.println("Média dos 3 Array: " + mediaArray(x, y, z));

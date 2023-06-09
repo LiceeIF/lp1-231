@@ -2,14 +2,14 @@ package semana14;
 
 public class Retangulo {
 
+    public double base;
+    public double altura;
+
     //construtor da classe:
     public Retangulo(double base, double altura){
         this.base = base;
         this.altura = altura;
     }
-    
-    public double base;
-    public double altura;
 
     public double calcularArea(){
         return base * altura;
