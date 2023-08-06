@@ -7,6 +7,17 @@ public class Conta {
     private LocalDate dataAbertura;
     protected double saldo;
     protected double tarifa;
+    private Correntista correntista;
+
+    public Conta(int numero, LocalDate dataAbertura, double saldo, double tarifa, Correntista correntista) {
+        this.numero = numero;
+        this.dataAbertura = dataAbertura;
+        this.saldo = saldo;
+        this.tarifa = tarifa;
+        this.correntista = correntista;
+    }
+
+    //getters e setters para a classe
 
     public int getNumero() {
         return this.numero;
@@ -40,12 +51,14 @@ public class Conta {
 		this.tarifa = tarifa;
 	}
 
+    // métodos para a classe: sacar, depositar e calcularTarifa 
+
     public void sacar (double valor){
         if (valor <= 0) {
-            throw new IllegalArgumentException ("Valor inválido para saque");
+            throw new IllegalArgumentException("Valor inválido para saque");
         }
         if (valor > saldo) {
-        throw new IllegalArgumentException ("Saldo insuficiente para saque");
+        throw new IllegalArgumentException("Saldo insuficiente para saque");
         }
 
         saldo -= valor;
@@ -62,6 +75,10 @@ public class Conta {
         saldo += valor;
         System.out.println ("Depósito de R$" + valor + " realizado para " + correntista);
         System.out.println ("Saldo atual: R$" + saldo);
+    }
+
+    public double calcularTarifa(){
+        return 0;
     }
 }
     

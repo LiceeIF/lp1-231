@@ -28,3 +28,7 @@ Repositório destinado ao conteúdo de LP1.
 - SEMANA 14
     - Introdução ao encapsulamento e modificadores de acesso.
     - Getters e setters.
+- SEMANA 17
+    - Introdução ao conceito de herança
+    - Generalização, Especialização e Herança
+
