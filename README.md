@@ -29,6 +29,9 @@ Repositório destinado ao conteúdo de LP1.
     - Introdução ao encapsulamento e modificadores de acesso.
     - Getters e setters.
 - SEMANA 17
-    - Introdução ao conceito de herança
-    - Generalização, Especialização e Herança
+    - Introdução ao conceito de herança.
+    - Generalização, Especialização e Herança.
+- SEMANA 19
+    - Continuando o conceito de herança.
+    - Polimorfismo e classes abstratas.
 
