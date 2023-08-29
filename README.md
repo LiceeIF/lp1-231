@@ -35,3 +35,9 @@ Repositório destinado ao conteúdo de LP1.
     - Continuando o conceito de herança.
     - Polimorfismo e classes abstratas.
 
+- SEMANA 20
+    - Diagrama de classes
+
+- SEMANA 21
+    - Introduzindo INTERFACE java
+    - Usando Collections, LIST e arraylist
