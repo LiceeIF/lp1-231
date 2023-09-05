@@ -41,3 +41,7 @@ Repositório destinado ao conteúdo de LP1.
 - SEMANA 21
     - Introduzindo INTERFACE java
     - Usando Collections, LIST e arraylist
+
+- SEMANA 22
+    - Acesso do banco de dados ao Java
+    - JDBC - Java Data Base Connection
