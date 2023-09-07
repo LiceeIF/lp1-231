@@ -43,5 +43,6 @@ Repositório destinado ao conteúdo de LP1.
     - Usando Collections, LIST e arraylist
 
 - SEMANA 22
-    - Acesso do banco de dados ao Java
+    - Acesso do banco de dados (SQL) ao código Java
     - JDBC - Java Data Base Connection
+    - Exercícios: Atualizar_Aluno; Buscar_Aluno_Por_ID; Buscar_Aluno_por_Nome; Deletar_Aluno;
